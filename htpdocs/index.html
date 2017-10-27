@@ -1,48 +1,80 @@
 <!DOCTYPE html>
- <html lang="zh-TW">
- <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width,
-initial-scale=1.0">
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <title>tomy11124: A Puzzle Game</title>
- <meta name="author" content="Yiwei Chiao">
- <meta name="description" content="A web-based Sokoban
-(倉庫番) game.">
- <meta name="keywords" content="Javascript, game, Sokoban">
- </head>
- <body style="background-color: #ffffe7;">
- <header style="background-color: #c7c7f7;">
- <h1>Sokoban:</h1>
- <h3>⼀個 html5/css3/node.js 的練習專案</h3>
- </header>
- <nav style="background-color: #c7f7f7;">
- <h2>NAV</h2>
- <h3>功能表單 navigation</h3>
- </nav>
- <aside style="background-color: #f7c7c7; width: 15%;
-height: 500px; float: left;">
- <h2>ASIDE</h2><h3>側欄</h3>
- </aside>
- <article style="background-color: #c7c7c7; width: 85%;
-height: 500px; float: left;">
- <h2>ARTICLE</h2>
- 主題⽂件
- <section style="background-color: #c7f7c7;
-height: 150px;">
- <h2>SECTION</h2>
- 第⼀⼩節
- </section>
- <section style="background-color: #c7f7c7;
-height: 150px;">
- <h2>SECTION</h2>
- 第⼆⼩節
- </section>
- </article>
- <footer style="background-color: #e7e7e7;">
-7
- <h2>FOOTER</h2>
-<small>&copy; Copyright 2017，佛光⼤學創意與科技學院<small>
- </footer>
- </body>
- </html>
+    <title>小遊戲</title>
+    <meta name="author" content="Yiwei Chiao">
+    <meta name="description" content="A web-based Sokoban (倉庫番) game.">
+    <meta name="keywords" content="Javascript, game, Sokoban">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header id="page_top">
+      <h1 class="irontext">練習專案:</h1>
+      <h3>練習專案</h3>
+    </header>
+    <nav>
+      <h2></h2>
+      <h3>功能表單 </h3>
+      <ul>
+        <li id="sec1">第1頁
+          <ul class="drop_box" id="drop_1">
+            <li><a href="#sec1">Section 1</a></li>
+          </ul>
+        </li>
+        <li>第2頁
+          <ul class="drop_box" id="drop_2">
+            <li><a href="#sec2">Section 2</a></li>
+          </ul>
+        </li>
+        <li>第3頁
+          <ul class="drop_box" id="drop_3">
+            <li><a href="#sec3">Section 3</a></li>
+          </ul>
+        </li>
+        <li>第4頁</li>
+        <li>第5頁</li>
+        <li id="about">關於
+          <ul class="drop_box" id="drop_about">
+            <li>好遊戲</li>
+            <li>爛遊戲</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="flexbox">
+      <aside>
+        <h2 class="irontext">側欄</h2>
+        <h3>側欄</h3>
+      </aside>
+      <article>
+        <h2 class="bluetext">主題文件</h2>
+        主題文件
+        <section class="browntext" id="sec1">
+          <h2 class="redtext">第一小節</h2>
+          第一小節
+          <img src="assets/png/SokobanClone_byVellidragon.png" alt="sokoban icons"
+            width="480" height="480">
+          <button type="button">
+            <a href="#page_top">回上方</a>
+          </button>
+        </section>
+        <section class="browntext milky" id="sec2">
+          <h2 class="redtext">SECTION</h2>
+          第二小節
+        </section>
+        <section class="browntext milky" id="sec3">
+          <h2 class="redtext">SECTION</h2>
+          第三小節
+        </section>
+      </article>
+    </div>
+    <footer class="lighttext">
+      <h2 class="blacktext">佛光大學創意與科技學院</h2>
+      <small>&copy; 佛光大學創意與科技學院<small>
+    </footer>
+  </body>
+</html>
