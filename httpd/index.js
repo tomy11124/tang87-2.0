@@ -1,17 +1,24 @@
 'use strict';
 
-var http = require('http');
+let http = require('http');
 
 http.createServer((request, response) => {
-    let fs = require('fs')
-    fs.readFile('index.html', (err, data) => {
+    request.on('end',()=> {
+    console.log('Request method: ' + request.method);
+    console.log('Request url: ' + request.url);
+                });
+
+
+
+
         response.writeHead(200, {
-            'Content-Type': 'text/html'
-        });
-        response.write(data);
-        response.end();
+        'Content-Type':'text/plain'
     });
-}).listen(8080);
+
+
+    response.end('Hello World!\n');
+}).listen(8088);
+
 // log message to Console
-console.log('Server running at http://127.0.0.1:8080/');
+console.log('Server running at http://127.0.0.1:8088/');
 // index.js
