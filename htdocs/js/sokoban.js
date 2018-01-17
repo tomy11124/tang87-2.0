@@ -193,6 +193,7 @@ let prototypeGameState = {
 
   isGoal: function ({x, y}) {
     return (this.level[y].charAt(x) == SOKOBAN.GOAL);
+
   },
 
   isMan: function ({x, y}) {
@@ -247,6 +248,7 @@ let prototypeGameState = {
   moveBoxIn: function (cell) {
     if (this.isGoal(cell)) {
       this.putBoxOnGoal(cell);
+
     }
     else {
       this.putBox(cell);
@@ -275,6 +277,7 @@ let prototypeGameState = {
   moveManIn: function (cell) {
     if (this.isGoal(cell)) {
       this.putManOnGoal(cell);
+
     }
     else {
       this.putMan(cell);
@@ -437,7 +440,25 @@ let prototypeGameState = {
 
     return this;
   }
+
+  GameOver: function (){
+
+    var finished = false;
+
+    for (var i = 0; i < this.level.length; i++) {
+      for(var j = 0;j < this.level[i].length;j++) {
+    if(this.level[i][j] == SOKOBAN.GOAL||this.level[i][j] == SOKOBAN.BOX){
+      finished = false;
+  }
+}
+}
+if (finished) {
+  alert("恭喜妳過闢了，你好聰明喔");
+}
+}
 };
+
+
 
 /**
  * 繪出盤面上的格線
@@ -564,6 +585,7 @@ let sokoban = {
   update: function (e) {
     this.move(e);
     this.paint();
+    this.GameOver();
   },
 };
 
